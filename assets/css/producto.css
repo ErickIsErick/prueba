@@ -1,0 +1,186 @@
+main {
+  width: 100%;
+  background-color: #fff;
+}
+
+.producto {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin: 20vh auto 0 auto;
+}
+
+.imagen {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+#imagen-principal {
+  width: 100%;
+  margin-bottom: 2vh;
+  overflow: hidden;
+}
+
+#imagen-principal img {
+  width: 100%;
+  border-radius: 3vh;
+  overflow: hidden;
+}
+
+#imagenes {
+  width: 100%;
+  height: 13vh;
+  overflow: hidden;
+  overflow-x: scroll;
+  display: flex;
+  gap: 4vh;
+}
+@media (min-width: 800px) {
+  #imagenes::-webkit-scrollbar {
+    height: 1vh;
+  }
+
+  #imagenes::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  #imagenes::-webkit-scrollbar-thumb {
+    background-color: rgb(10, 124, 18, 0.5);
+  }
+}
+
+#imagenes img {
+  height: 10vh;
+  border-radius: 1vh;
+  cursor: pointer;
+  border: 3px solid rgb(10, 124, 18, 0.15);
+}
+
+#imagenes img:hover, .imagen-activa{
+  border: 3px solid rgb(10, 124, 18, 0.5) !important;
+  box-shadow: 0 0 1.5vh #888;
+}
+
+.ficha-tecnica {
+  width: 50%;
+}
+
+.containerstar {
+  margin-bottom: 2vh;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+}
+
+.containerstar span {
+  margin-right: 2vh;
+  font-size: 0.8rem;
+  height: min-content;
+  user-select: none;
+}
+
+.containerstar figure {
+  width: min-content;
+  display: flex;
+  overflow: hidden;
+  width: fit-content;
+  gap: 2px;
+}
+
+.containerstar figure img {
+  height: clamp(0.8rem, 0.657rem + 0.381vw, 1rem);
+}
+
+.ficha-tecnica h2{
+  color: #000117;
+  width: 100%;
+  font-weight: 800;
+  font-size: clamp(1.5rem, 1.143rem + 0.952vw, 2rem);
+}
+
+.ficha-tecnica p{
+  color: #000117;
+  font-family: 'Poppins';
+  font-weight: 400;
+  width: 100%;
+  line-height: 1.3rem;
+  font-size: 1rem;
+  margin: 2vh 0 8vh 0;
+}
+
+.ficha-tecnica button {
+  outline: none;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 2.5rem;
+  font-size: clamp(0.9rem, 0.757rem + 0.381vw, 1.1rem);
+  font-family: "Poppins";
+  background: #2dc92c;
+  border: none;
+  border-radius: 1vh;
+  cursor: pointer;
+  color: #fff;
+  box-shadow: 0 1vh 0 #0a7c12;
+}
+
+.ficha-tecnica button i {
+  font-size: 1.5rem;
+  margin-right: 1.4vh;
+}
+
+@media (max-width: 800px) {
+  .ficha-tecnica h2, .ficha-tecnica p{
+    text-align: center;
+  }
+
+  .ficha-tecnica button {
+    margin: 0 auto 5vh auto;
+  }
+  
+  .producto {
+    flex-direction: column-reverse;
+  }
+
+  .ficha-tecnica {
+    width: 100%;
+  }
+
+  .imagen {
+    width: 100%;
+  }
+
+  .containerstar {
+    margin: 0 auto 2vh auto;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .containerstar span {
+    margin: 1vh 0 0 0;
+  }
+}
+
+.descripcion{
+  width: 70%;
+  margin: 10vh auto;
+}
+
+.descripcion p{
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+
+.descripcion p span{
+  font-size: 1.1rem;
+  color: rgb(0, 1, 23, .8);
+}
+
+.titulo-descricripcion{
+  font-size: 1.3rem !important;
+  margin-top: 10vh;
+  font-weight: 800;
+  color: rgb(0, 1, 23) !important;
+}
